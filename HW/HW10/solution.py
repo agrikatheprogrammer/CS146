@@ -7,27 +7,27 @@ class TreeNode:
         self.left = left
         self.right = right
 
-def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
-    if not root:
-        return []
+    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+        if not root:
+            return []
 
-    result = []
-    queue = deque([root])
+        result = []
+        queue = deque([root])
 
-    while queue:
-        level_size = len(queue)
-        level_vals = []
+        while queue:
+            level_size = len(queue)
+            level_vals = []
 
-        for _ in range(level_size):
-            node = queue.popleft()
-            level_vals.append(node.val)
+            for _ in range(level_size):
+                node = queue.popleft()
+                level_vals.append(node.val)
 
-            if node.left:
-                queue.append(node.left)
-            if node.right:
-                queue.append(node.right)
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
 
-        result.append(level_vals)
+            result.append(level_vals)
 
-    return result
+        return result
 
