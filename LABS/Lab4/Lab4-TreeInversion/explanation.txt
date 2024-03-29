@@ -1,0 +1,13 @@
+The problem was to swap each root's children from the top of the tree (root) and repeat this process for its children and their children and so on until each level's nodes are swapped til nodes==null i.e. level is beyond leaf nodes.
+
+So, recursively,
+root node's children were swapped if root is not null
+and their children were swapped if they are not null
+and so on
+until all the calls return null (there is no more nodes 
+with children for swapping; children of leaf nodes)
+
+This way, whole tree can be inverted,
+and the original tree can be obtained once again upon
+"re-inversion" i.e. another tree inversion operation.
+
