@@ -25,7 +25,8 @@ public static List<List<Integer>> levelOrder(TreeNode root) {
                 }
             }
             return result;
-        } }
+        }
+}
 
 
 class TreeNode {
