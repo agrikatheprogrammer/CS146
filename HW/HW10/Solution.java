@@ -1,5 +1,5 @@
 public class Solution {
-public static List<List<Integer>> levelOrder(TreeNode root) {
+            public static List<List<Integer>> levelOrder(TreeNode root) {
             if (root==null)
                 return null;
             List<List<Integer>> result= new ArrayList<>();
@@ -25,7 +25,7 @@ public static List<List<Integer>> levelOrder(TreeNode root) {
                 }
             }
             return result;
-        }
+            }
 }
 
 
