@@ -9,10 +9,12 @@ public static List<List<Integer>> levelOrder(TreeNode root) {
             List<Integer> toadd = new ArrayList<>();
             while (!qe.isEmpty()) {
                 toadd.add(qe.peek().val);
-                if (qe.peek().right != null)
-                    qe.add(qe.peek().right);
+                        //add left first (l-r)
                 if (qe.peek().left != null)
                     qe.add(qe.peek().left);
+                        //add right if not null
+                if (qe.peek().right != null)
+                    qe.add(qe.peek().right);      
                 qe.remove();
                 count--;
             if (count == 0) {
