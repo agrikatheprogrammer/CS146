@@ -18,7 +18,7 @@ Converting an adjacency matrix to an adjacency list involves representing each v
 
 Pseudocode:
     
-    for i from 0 to n-1:
+    for i from 0 to n-1 (n is size of graph):
         neighbors = create empty list
         for j from 0 to n-1:
             if matrix[i][j] == 1:
@@ -36,5 +36,5 @@ Pseudocode:
     
     for each vertex v in graph:
         for each neighbor u of v in graph[v]:
-            add edge (u, v) to reversedGraph (empty graph created earlier)
+            add edge (u, v) to reversedGraph (empty graph created at start)
 
