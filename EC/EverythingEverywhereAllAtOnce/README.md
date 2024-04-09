@@ -7,11 +7,9 @@ Pseudocode:
     function adjacencyListToMatrix(adjacencyList):
     n = length(adjacencyList)
     matrix = createMatrix(n, n, 0)
-    
     for each vertex v in adjacencyList:
         for each neighbor u of v in adjacencyList[v]:
             matrix[v][u] = 1
-    
     return matrix
     
 # 2. Converting Adjacency Matrix to Adjacency List
@@ -22,14 +20,12 @@ Pseudocode:
     function adjacencyMatrixToList(matrix):
     n = number of rows in matrix
     adjacencyList = create empty list
-    
     for i from 0 to n-1:
         neighbors = create empty list
         for j from 0 to n-1:
             if matrix[i][j] == 1:
                 neighbors.append(j)
-        adjacencyList[i] = neighbors
-    
+        adjacencyList[i] = neighbors  
     return adjacencyList
     
 # 3. Reversing Direction of Edges in Directed Graph
@@ -38,8 +34,7 @@ Reversing the direction of edges in a directed graph involves flipping the direc
 
 Pseudocode:
     function reverseDirectedGraph(graph):
-    reversedGraph = create empty graph
-    
+    reversedGraph = create empty graph    
     for each vertex v in graph:
         for each neighbor u of v in graph[v]:
             add edge (u, v) to reversedGraph
