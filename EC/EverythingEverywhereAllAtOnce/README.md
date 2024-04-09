@@ -18,7 +18,7 @@ Converting an adjacency matrix to an adjacency list involves representing each v
 
 Pseudocode:
     
-    for i from 0 to n-1 (n is size of graph):
+    for i from 0 to n-1 (n is dim of matrix):
         neighbors = create empty list
         for j from 0 to n-1:
             if matrix[i][j] == 1:
