@@ -2,7 +2,7 @@ class Solution {
     public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
         if (image[sr][sc] == newColor) return image;
         
-        flood(image, image[sr][sc], newColor, sr, sc);
+        flood(image, sr,sc, newColor, image[sr][sc]);
         
         return image;
     }
