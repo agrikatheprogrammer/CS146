@@ -10,9 +10,7 @@ public class Solution {
             }
             map.put(nums[i], i);
         }
-        // If no solution is found, throw an exception
+        // If no solution is found, return an empty array or throw an exception
         throw new IllegalArgumentException("No two sum solution");
     }
-}
-
 }
