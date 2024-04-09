@@ -1,4 +1,4 @@
-# PROBLEM STATEMENT
+# Problem Statement
 
 An image is represented by an m x n integer grid image where image[i][j] represents the pixel value of the image.
 
@@ -9,7 +9,7 @@ To perform a flood fill, consider the starting pixel, plus any pixels connected 
 Return the modified image after performing the flood fill.
 
 
-# EXPLANATION OF ALGORITHM
+# Explanation of Algorithm
 
 The flood fill algorithm operates on the following high-level approach:
 
@@ -25,14 +25,14 @@ The flood fill algorithm operates on the following high-level approach:
 
 6. **Termination**: The flood fill operation terminates when no more adjacent pixels can be filled or when the entire connected region has been filled.
 
-## Benefits
+# Benefits
 The flood fill algorithm offers several benefits:
 
 - **Simplicity**: The algorithm is relatively simple to implement and understand.
 - **Efficiency**: With proper optimization, the algorithm can efficiently fill large contiguous regions in the grid.
 - **Versatility**: It can be adapted for various applications, including coloring, masking, and boundary detection.
 
-## Conclusion
+# Conclusion
 The flood fill algorithm is a powerful tool for filling regions in two-dimensional grids. By following a high-level approach that involves selecting a seed point, recursively filling neighbors, handling boundary conditions, and optimizing performance, it provides an effective solution for a wide range of graphics-related tasks.
 
 
