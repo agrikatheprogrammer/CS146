@@ -11,8 +11,8 @@ class Solution {
     if (
         sr < 0 ||
         sc < 0 ||
-        sr >= (int)image.size() ||
-        sc >= (int)image[r].size() ||
+        sr >= image.size() ||
+        sc >= image[sr].size() ||
         image[sr][sc] == newColor ||
         image[sr][sc] != oldColor
     ) 
