@@ -34,7 +34,9 @@ Reversing the direction of edges in a directed graph involves flipping the direc
 
 Pseudocode:
     function reverseDirectedGraph(graph):
-    reversedGraph = create empty graph    
+    reversedGraph = create empty graph
+    
     for each vertex v in graph:
         for each neighbor u of v in graph[v]:
             add edge (u, v) to reversedGraph
+
