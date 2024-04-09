@@ -7,7 +7,7 @@ class Solution {
         return image;
     }
 
-   public void floodFill(int[][] image, int sr, int sc, int newcol, int color) {
+   public void flood(int[][] image, int sr, int sc, int newcol, int color) {
     if (
         sr < 0 ||
         sc < 0 ||
