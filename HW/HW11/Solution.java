@@ -20,9 +20,9 @@ class Solution {
     
 
     image[sr][sc] = newColor;
-    floodFill(image, sr - 1, sc, newColor, oldColor);
-    floodFill(image, sr, sc - 1, newColor, oldColor);
-    floodFill(image, sr, sc + 1, newColor, oldColor);
-    floodFill(image, sr + 1, sc, newColor, oldColor);
+    flood(image, sr - 1, sc, newColor, oldColor);
+    flood(image, sr, sc - 1, newColor, oldColor);
+    flood(image, sr, sc + 1, newColor, oldColor);
+    flood(image, sr + 1, sc, newColor, oldColor);
 }
 }
