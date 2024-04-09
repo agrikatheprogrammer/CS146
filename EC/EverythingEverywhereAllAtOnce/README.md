@@ -4,10 +4,7 @@ Explanation:
 Converting an adjacency list to an adjacency matrix involves representing the connections between vertices in a graph as a binary matrix. If there is an edge between vertex i and vertex j, the corresponding entry in the adjacency matrix will be 1; otherwise, it will be 0.
 
 Pseudocode:
-    function adjacencyListToMatrix(adjacencyList):
-    n = length(adjacencyList)
-    matrix = createMatrix(n, n, 0)
-    
+        
     for each vertex v in adjacencyList:
         for each neighbor u of v in adjacencyList[v]:
             matrix[v][u] = 1
@@ -20,9 +17,6 @@ Explanation:
 Converting an adjacency matrix to an adjacency list involves representing each vertex and its neighbors in the graph. For each vertex, we iterate over its adjacent vertices in the adjacency matrix and add them to the adjacency list.
 
 Pseudocode:
-    function adjacencyMatrixToList(matrix):
-    n = number of rows in matrix
-    adjacencyList = create empty list
     
     for i from 0 to n-1:
         neighbors = create empty list
@@ -39,10 +33,8 @@ Explanation:
 Reversing the direction of edges in a directed graph involves flipping the direction of each edge. For each directed edge (u, v), we add a new edge from v to u in the reversed graph.
 
 Pseudocode:
-    function reverseDirectedGraph(graph):
-    reversedGraph = create empty graph
     
     for each vertex v in graph:
         for each neighbor u of v in graph[v]:
-            add edge (u, v) to reversedGraph
+            add edge (u, v) to reversedGraph (empty graph created earlier)
 
