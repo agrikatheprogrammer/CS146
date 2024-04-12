@@ -4,7 +4,6 @@ class Solution:
     def is_anagram(s, v):
         return all(a in set(v) for a in set(s)) and all(a in set(s) for a in set(v))
         
-
     @staticmethod
     def is_anagram_sort(s, v):
         return len(s) == len(v) and sorted(s) == sorted(v)
