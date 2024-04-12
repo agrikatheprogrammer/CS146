@@ -21,6 +21,7 @@ class Solution{
     for (int i=0;i<s.length();i++){ 
       result.add(s.charAt(i));
     }
+    return result;
   }
 
   public static void main(){
