@@ -44,27 +44,28 @@ public class TopologicalSort {
         Set<Node> visited = new HashSet<>();
         Deque<Node> stack = new ArrayDeque<>();
         // Perform DFS starting from all vertices with in-degree 0
-        for (Node node : graph.graph.keySet()) {
-            if (indmap.get(node) == 0) {
-                dfs(node,visited,stack);
+        for (Node vertex : graph.getVertices()) {
+            if (indmap.get(vertex) == 0) {
+                dfs(vertex,visited,stack);
             }
         }
-                List<Integer> result = new ArrayList<>();
+        List<Integer> result = new ArrayList<>();
         while (!stack.isEmpty()) {
-            result.add(stack.pop().num);
+            result.add(stack.pop().num); //first element is at top of list
         }
-        Collections.reverse(result);
         return result;
     }
 
     private void dfs(Node vertex, Set<Node> visited, Deque<Node> stack) {
         visited.add(vertex);
-        stack.push(vertex);
+
         for (Node neighbor : graph.graph.get(vertex)) {
             if (!visited.contains(neighbor)) {
                 dfs(neighbor, visited, stack);
             }
         }
+
+        stack.push(vertex); // Push vertex to stack after all its neighbors are visited
     }
 
 
@@ -143,4 +144,5 @@ public class TopologicalSort {
 
 
 }
+
 
