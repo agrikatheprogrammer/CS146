@@ -1,8 +1,9 @@
 import java.util.ArrayList;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 class Solution{
-    final int CHARACTER_RANGE=256;
+    static final int CHARACTER_RANGE=256;
     //O(n)
     public static boolean isAnagram(String s,String v){
         ArrayList<Character> s_chars=charsInString(s);
@@ -30,7 +31,7 @@ class Solution{
     }
 
     // O(nlogn)
-    boolean isAnagramSort(String string1, String string2) {
+    static boolean isAnagramSort(String string1, String string2) {
         if (string1.length() != string2.length()) {
             return false;
         }
@@ -42,7 +43,7 @@ class Solution{
     }
 
     //O(n)
-    public boolean isAnagramCounting(String string1, String string2) {
+    public static boolean isAnagramCounting(String string1, String string2) {
         if (string1.length() != string2.length()) {
             return false;
         }
@@ -62,6 +63,18 @@ class Solution{
     public static void main(String[] args){
         String a="mwahaha";
         String b="ahahmaw";
+        String c="ahahmab";
+        String d="ah";
         System.out.println(isAnagram(a,b));
+        System.out.println(isAnagramSort(a,b));
+        System.out.println(isAnagramCounting(a,b));
+        System.out.println();
+        System.out.println(isAnagram(a,c));
+        System.out.println(isAnagramSort(a,c));
+        System.out.println(isAnagramCounting(a,c));
+        System.out.println();
+        System.out.println(isAnagram(b,d));
+        System.out.println(isAnagramSort(b,d));
+        System.out.println(isAnagramCounting(b,d));
     }
 }
