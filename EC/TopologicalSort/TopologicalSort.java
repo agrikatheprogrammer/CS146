@@ -61,6 +61,8 @@ public class TopologicalSort {
 
         List<Node> neighbors = new ArrayList<>(graph.graph.get(vertex));
 
+        // Sort the neighbors based on their indegree
+        neighbors.sort(Comparator.comparingInt(node -> indmap.get(node))); //AMENDED
         for (Node neighbor : neighbors) {
             if (!visited.contains(neighbor)) {
                 dfs(neighbor, visited, stack);
@@ -125,8 +127,8 @@ public class TopologicalSort {
         graph1.addVertex(node10);
         graph1.addEdge(node2,node3);
 
-        graph1.addEdge(node1,node3);
         graph1.addEdge(node1,node2);
+        graph1.addEdge(node1,node3);
         graph1.addEdge(node2,node4);
         graph1.addEdge(node2,node5);
         graph1.addEdge(node1,node6);
