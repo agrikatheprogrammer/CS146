@@ -14,15 +14,13 @@ Now, let's analyze the given graph and see how both algorithms work on it.
                          
 # Kahn's Algorithm Output:
 
-Kahn's algorithm processes nodes with in-degree 0 first. So, it starts with nodes 30 and 7.
-After that, it processes 90, 8, 10, 50, 6, 9, 14, 12, 13, and finally 11.
+Kahn's algorithm processes nodes with in-degree 0 first. So, it starts with nodes 30, 7, 90.
+After that, it processes 8, 10, 50, 6, 9, 14, 12, 13, and finally 11.
 The resulting order is: [30, 7, 90, 8, 10, 50, 6, 9, 14, 12, 13, 11]
 
 # DFS Output:
 
-DFS explores as far as possible along each branch, starting from a vertex with in-degree 0.
-It starts from node 90 and explores its neighbors recursively.
-It then goes to node 7, then to node 8, and so on.
-The order in which nodes are added to the stack and popped gives us the topological ordering.
-The resulting order is: [90, 7, 8, 9, 6, 50, 30, 10, 11, 13, 12, 14]
+
+
+## Conclusion
 Both algorithms produce the same topological ordering, but they traverse the graph differently. Kahn's algorithm uses a queue and is more iterative, while DFS is recursive and uses a stack.
