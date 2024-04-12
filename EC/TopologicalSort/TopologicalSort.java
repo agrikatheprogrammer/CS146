@@ -46,7 +46,6 @@ public class TopologicalSort {
         // Perform DFS starting from a vertex with in-degree 0
         for (Node vertex : graph.getVertices()) {
             if (indmap.get(vertex) == 0) {
-                stack.push(vertex);
                 dfs(vertex,visited,stack);
             }
         }
@@ -54,26 +53,22 @@ public class TopologicalSort {
         while (!stack.isEmpty()) {
             result.add(stack.pop().num); //last element is at top of list
         }
-        Collections.reverse(result);
         return result;
     }
 
     private void dfs(Node vertex, Set<Node> visited, Deque<Node> stack) {
         visited.add(vertex);
 
-        // Sort the neighbors based on their in-degree
         List<Node> neighbors = new ArrayList<>(graph.graph.get(vertex));
-        neighbors.sort(Comparator.comparingInt(node -> indmap.get(node)));
 
-        // Visit the sorted neighbors
         for (Node neighbor : neighbors) {
             if (!visited.contains(neighbor)) {
-                stack.push(neighbor);
                 dfs(neighbor, visited, stack);
             }
         }
-
+        stack.push(vertex); // Push the current vertex onto the stack after visiting its neighbors
     }
+
 
 
 
