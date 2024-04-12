@@ -19,7 +19,7 @@ After that, it processes 8, 10, 50, 6, 9, 14, 12, 13, and finally 11.
 The resulting order is: [30, 7, 90, 8, 10, 50, 6, 9, 14, 12, 13, 11]
 
 # DFS Output:
-The resulting order is: [90, 7, 8, 9, 6, 50, 30, 10, 11, 13, 12, 14].
+The resulting order is: [30, 10, 14, 12, 13, 11, 7, 8, 50, 6, 9, 90].
 
 ## Conclusion
 Both algorithms produce the same topological ordering, but they traverse the graph differently. Kahn's algorithm uses a queue and is more iterative, while DFS is recursive and uses a stack.
