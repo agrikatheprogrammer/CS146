@@ -24,7 +24,7 @@ class Solution{
     return result;
   }
 
-  public static void main(){
+  public static void main(String[] args){
     String a="mwahaha";
     String b="ahahmaw";
     System.out.println(isAnagram(a,b));
