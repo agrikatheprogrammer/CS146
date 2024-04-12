@@ -2,10 +2,8 @@ class Solution:
   
     @staticmethod
     def is_anagram(s, v):
-        s_chars = set(s)
-        v_chars = set(v)
-        s_sub_v = all(a in v_chars for a in s_chars)
-        v_sub_s = all(a in s_chars for a in v_chars)
+        s_sub_v = all(a in set(v) for a in set(s))
+        v_sub_s = all(a in set(s) for a in set(v))
         return s_sub_v and v_sub_s
 
     @staticmethod
