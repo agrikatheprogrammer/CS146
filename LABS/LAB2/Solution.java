@@ -17,7 +17,7 @@ class Solution{
   
 
   public static ArrayList<Character> charsInString(String s){
-    ArrayList<Character> result;
+    ArrayList<Character> result=new ArrayList<>();
     for (int i=0;i<s.length();i++){ 
       result.add(s.charAt(i));
     }
