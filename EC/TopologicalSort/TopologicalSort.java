@@ -30,51 +30,44 @@ public class TopologicalSort {
                 }
             }
         }
-        return result;
-    }
-
-
-
-
-    public List<Integer> topologicalSortDFS() {
-        Map<Node, Integer> indegreeMap =new HashMap<>(indmap);
-        Set<Node> visited = new HashSet<>();
-        Deque<Node> stack = new ArrayDeque<>();
-
-        // Find vertices with indegree 0 and start DFS from them
-        for (Node vertex : graph.getVertices()) {
-            if (indegreeMap.get(vertex) == 0 && !visited.contains(vertex)) {
-                dfs(graph, vertex, visited, stack);
-            }
-        }
-
-        // Convert stack to list to get the topological ordering
-        List<Integer> result = new ArrayList<>(stack.size());
-        while (!stack.isEmpty()) {
-            result.add(stack.pop().num);
-        }
-
         // Check for cycles
-        if (result.size() != graph.adjacencyList.size()) {
+        if (result.size() != graph.graph.values().size()) {
             throw new IllegalArgumentException("The graph contains a cycle!");
         }
 
         return result;
     }
 
-    private void dfs(Graph graph, Node vertex, Set<Node> visited, Deque<Node> stack) {
+
+
+    public List<Integer> topologicalSortDFS() {
+        Set<Node> visited = new HashSet<>();
+        Deque<Node> stack = new ArrayDeque<>();
+        // Perform DFS starting from all vertices with in-degree 0
+        for (Node vertex : graph.getVertices()) {
+            if (indmap.get(vertex) == 0 && !visited.contains(vertex)) {
+                dfs(vertex, visited, stack);
+            }
+        }
+        List<Integer> result = new ArrayList<>();
+        while (!stack.isEmpty()) {
+            result.add(stack.pop().num); //first element is at top of list
+        }
+        return result;
+    }
+
+    private void dfs(Node vertex, Set<Node> visited, Deque<Node> stack) {
         visited.add(vertex);
 
-        // Explore neighbors
         for (Node neighbor : graph.getNeighbors(vertex)) {
             if (!visited.contains(neighbor)) {
-                dfs(graph, neighbor, visited, stack);
+                dfs(neighbor, visited, stack);
             }
         }
 
-        // Add vertex to stack after exploring all neighbors
-        stack.push(vertex);
+        stack.push(vertex); // Push vertex to stack after all its neighbors are visited
     }
+
 
     public void helper() {
         for (Node node : graph.graph.keySet()) {
@@ -114,6 +107,7 @@ public class TopologicalSort {
         Node node10=new Node(11);
         Node node11=new Node(90);
         Node node12=new Node(30);
+
         graph1.addVertex(node12);
         graph1.addVertex(node11);
         graph1.addVertex(node1);
@@ -126,6 +120,8 @@ public class TopologicalSort {
         graph1.addVertex(node8);
         graph1.addVertex(node9);
         graph1.addVertex(node10);
+        graph1.addEdge(node2,node3);
+
         graph1.addEdge(node1,node2);
         graph1.addEdge(node1,node3);
         graph1.addEdge(node2,node4);
@@ -145,3 +141,5 @@ public class TopologicalSort {
 
 
 }
+
+
