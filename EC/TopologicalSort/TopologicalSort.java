@@ -134,12 +134,10 @@ public class TopologicalSort {
         graph1.addEdge(node11,node6);
         graph1.addEdge(node12,node6);
         TopologicalSort topo1=new TopologicalSort(graph1);
-        System.out.println(topo1.Kahns());
+        System.out.println("Kahn's: "+topo1.Kahns());
         System.out.println();
-        System.out.println(topo1.topologicalSortDFS());
+        System.out.println("DFS: "+topo1.topologicalSortDFS());
     }
 
 
 }
-
-
