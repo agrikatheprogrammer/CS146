@@ -53,6 +53,12 @@ public class TopologicalSort {
         while (!stack.isEmpty()) {
             result.add(stack.pop().num);
         }
+
+        // Check for cycles
+        if (result.size() != graph.adjacencyList.size()) {
+            throw new IllegalArgumentException("The graph contains a cycle!");
+        }
+
         return result;
     }
 
