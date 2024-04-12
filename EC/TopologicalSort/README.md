@@ -17,7 +17,7 @@ After that, it processes 8, 10, 50, 6, 9, 14, 12, 13, and finally 11.
 The resulting order is: [30, 7, 90, 8, 10, 50, 6, 9, 14, 12, 13, 11]
 
 # DFS Output:
-The resulting order is:  [30, 10, 14, 12, 13, 11, 7, 8, 6, 9, 50, 90]. 30 (0 indegree node) is pushed first and explored til end of path (30, 10, 14, 12, 13, 11). Then, 7 (0 indegree node) is pushed and explored til end of path with its neighbors (50, 8) being explored in order of indegree (7, 8, 6, 9, 50). Finally, last node 9 with 0 indegree is explored (having 10 as a neighbor but it has already been explored) and pushed.
+The resulting order is:  [30, 10, 14, 12, 13, 11, 7, 8, 6, 9, 50, 90]. 30 (0 indegree node) is pushed first and explored til end of path (30, 10, 14, 12, 13, 11). Then, 7 (0 indegree node) is pushed and explored til end of path with its neighbors (50, 8) being explored in order of indegree (7, 8, 6, 9, 50). Finally, last node 9 with 0 indegree is explored (having 10 as a neighbor but it has already been explored) and pushed (9).
 
 ## Conclusion
 Both algorithms produce different topological ordering because they traverse the graph differently. Kahn's algorithm uses a queue and is more iterative, while DFS is recursive and uses a stack.
