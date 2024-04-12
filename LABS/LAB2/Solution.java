@@ -26,7 +26,7 @@ class Solution{
     return result;
   }
 
-// O(n^2)
+// O(nlogn)
 boolean isAnagramSort(String string1, String string2) {
     if (string1.length() != string2.length()) {
         return false;
