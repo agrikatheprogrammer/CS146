@@ -52,7 +52,7 @@ public class TopologicalSort {
         }
         List<Integer> result = new ArrayList<>();
         while (!stack.isEmpty()) {
-            result.add(stack.pop().num); //first element is at top of list
+            result.add(stack.pop().num); //last element is at top of list
         }
         Collections.reverse(result);
         return result;
@@ -60,7 +60,13 @@ public class TopologicalSort {
 
     private void dfs(Node vertex, Set<Node> visited, Deque<Node> stack) {
         visited.add(vertex);
-        for (Node neighbor : graph.graph.get(vertex)) {
+
+        // Sort the neighbors based on their in-degree
+        List<Node> neighbors = new ArrayList<>(graph.graph.get(vertex));
+        neighbors.sort(Comparator.comparingInt(node -> indmap.get(node)));
+
+        // Visit the sorted neighbors
+        for (Node neighbor : neighbors) {
             if (!visited.contains(neighbor)) {
                 stack.push(neighbor);
                 dfs(neighbor, visited, stack);
@@ -68,6 +74,7 @@ public class TopologicalSort {
         }
 
     }
+
 
 
     public void helper() {
@@ -123,8 +130,8 @@ public class TopologicalSort {
         graph1.addVertex(node10);
         graph1.addEdge(node2,node3);
 
-        graph1.addEdge(node1,node2);
         graph1.addEdge(node1,node3);
+        graph1.addEdge(node1,node2);
         graph1.addEdge(node2,node4);
         graph1.addEdge(node2,node5);
         graph1.addEdge(node1,node6);
@@ -145,4 +152,5 @@ public class TopologicalSort {
 
 
 }
+
 
