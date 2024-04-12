@@ -44,28 +44,27 @@ public class TopologicalSort {
         Set<Node> visited = new HashSet<>();
         Deque<Node> stack = new ArrayDeque<>();
         // Perform DFS starting from all vertices with in-degree 0
-        for (Node vertex : graph.getVertices()) {
-            if (indmap.get(vertex) == 0 && !visited.contains(vertex)) {
-                dfs(vertex, visited, stack);
+        for (Node node : graph.graph.keySet()) {
+            if (indmap.get(node) == 0) {
+                dfs(node,visited,stack);
             }
         }
-        List<Integer> result = new ArrayList<>();
+                List<Integer> result = new ArrayList<>();
         while (!stack.isEmpty()) {
-            result.add(stack.pop().num); //first element is at top of list
+            result.add(stack.pop().num);
         }
+        Collections.reverse(result);
         return result;
     }
 
     private void dfs(Node vertex, Set<Node> visited, Deque<Node> stack) {
         visited.add(vertex);
-
-        for (Node neighbor : graph.getNeighbors(vertex)) {
+        stack.push(vertex);
+        for (Node neighbor : graph.graph.get(vertex)) {
             if (!visited.contains(neighbor)) {
                 dfs(neighbor, visited, stack);
             }
         }
-
-        stack.push(vertex); // Push vertex to stack after all its neighbors are visited
     }
 
 
@@ -134,6 +133,9 @@ public class TopologicalSort {
         graph1.addEdge(node11,node6);
         graph1.addEdge(node12,node6);
         TopologicalSort topo1=new TopologicalSort(graph1);
+        System.out.println("GRAPH: ");
+        Graph.printGraph(graph1);
+        System.out.println();
         System.out.println("Kahn's: "+topo1.Kahns());
         System.out.println();
         System.out.println("DFS: "+topo1.topologicalSortDFS());
@@ -141,3 +143,4 @@ public class TopologicalSort {
 
 
 }
+
