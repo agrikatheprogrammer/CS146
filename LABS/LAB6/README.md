@@ -13,16 +13,16 @@ The problem can be approached using topological sorting, particularly Kahn's alg
 Kahn's algorithm works by iteratively selecting nodes with no incoming edges (in-degree of 0), removing them from the graph, and updating the in-degree of their adjacent nodes. This process continues until all nodes are visited or there are no nodes with in-degree 0 left.
 
 ## Algorithm
-Create an adjacency list representing the graph where each course is a vertex, and directed edges represent prerequisites.
-Initialize an array indegree to keep track of the in-degree of each course.
-Initialize an empty queue and add all courses with an in-degree of 0 to the queue.
-While the queue is not empty:
-Pop a course current from the queue.
-Add current to the result list.
-For each course next adjacent to current:
-Decrement the in-degree of next.
-If the in-degree of next becomes 0, add next to the queue.
-After traversing all courses, if the size of the result list is equal to the total number of courses (numCourses), return true, indicating it's possible to finish all courses. Otherwise, return false.
+- Create an adjacency list representing the graph where each course is a vertex, and directed edges represent prerequisites.
+- Initialize an array indegree to keep track of the in-degree of each course.
+- Initialize an empty queue and add all courses with an in-degree of 0 to the queue.
+- While the queue is not empty:
+-- Pop a course current from the queue.
+-- Add current to the result list.
+-- For each course next adjacent to current:
+-- Decrement the in-degree of next.
+- If the in-degree of next becomes 0, add next to the queue.
+- After traversing all courses, if the size of the result list is equal to the total number of courses (numCourses), return true, indicating it's possible to finish all courses. Otherwise, return false.
 
 ## Complexity Analysis
 - Time complexity: O(V + E), where V is the number of vertices (courses) and E is the number of edges (prerequisites).
