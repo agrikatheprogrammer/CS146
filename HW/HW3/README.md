@@ -44,7 +44,8 @@ MATRIX_MULTIPLY(A, B):
   for i from 1 to rows_A do: //executes rows_A times
     for j from 1 to cols_B do: //executes rows_A*cols_B times
     sum ← 0 
-      for k from 1 to cols_A do: //executes cols_B*rows_A*cols_A times=dominating in most time taken overall in function
+      for k from 1 to cols_A do: //executes cols_B*rows_A*cols_A times=dominating
+      // in most time taken overall in function
         sum ← sum + A[i][k] * B[k][j] 
       result[i][j] ← sum return result
 ```
