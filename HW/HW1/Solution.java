@@ -11,7 +11,7 @@ class Solution {
             return true;
         if (str.charAt(i)!=str.charAt(end))
             return false;
-        return isPalindrome(str.substring(i+1,end-1));
+        return isPalindrome(str.substring(i+1,end);
     }
 
 
