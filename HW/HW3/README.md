@@ -53,7 +53,8 @@ Insertion Sort is a simple sorting algorithm that builds the final sorted array 
 
 The algorithm starts with the second element of the array and compares it with the elements before it, moving larger elements one position to the right until it finds the correct position for the current element.
 It continues this process for each element in the array until the entire array is sorted.
-Time Complexity Analysis:
+
+# Time Complexity Analysis:
 
 ## Best Case: O(n)
 When the array is already sorted, Insertion Sort only needs to compare each element with its preceding element once, resulting in linear time complexity.
@@ -77,7 +78,7 @@ Matrix multiplication is an important operation in linear algebra and computer s
 - It initializes a result matrix with appropriate dimensions and fills it with zeros.
 - It iterates through each element of the result matrix, calculating the dot product of corresponding rows and columns from matrices A and B.
   
-## Time Complexity Analysis:
+# Time Complexity Analysis:
 
 The time complexity of matrix multiplication depends on the dimensions of the input matrices.
 
