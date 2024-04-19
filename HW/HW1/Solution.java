@@ -25,8 +25,10 @@ class Solution {
 }
 
 private boolean isPalindromeHelper(String str) {
-    int i=0;
+        int i=0;
         int end=str.length()-1;
+        if (str.length()<=1)
+            return true;
         if (str.charAt(i)!=str.charAt(end))
             return false;
         if (str.length()>1)
