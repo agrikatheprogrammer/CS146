@@ -17,18 +17,17 @@ class Solution {
 
 
 
-    // 3rd solution: 2nd solution below OPTIMIZED : AVOID DEEP RECURSION
-    //recursion is MUCH slower-+2ms avg time taken (15ms)-beating 27%
+    // passes 479/485 cases: memory exceeds for long strings
     public boolean isPalindrome(String s) {
     String str = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
-    return isPalindromeHelper(str).equals(s);
+    return isPalindromeHelper(str).equals(str);
 }
 
 private String isPalindromeHelper(String s) {
         if (s.isEmpty()) {
             return s;
         }
-        return reverseString(s.substring(1)) + s.charAt(0);
+        return isPalindromeHelper(s.substring(1)) + s.charAt(0);
 }
 
 
