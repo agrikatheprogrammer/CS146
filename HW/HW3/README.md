@@ -64,9 +64,8 @@ When the array is sorted in reverse order, each element needs to be compared and
 In most scenarios, Insertion Sort exhibits quadratic time complexity as it involves nested loops and potentially multiple comparisons and swaps for each element.
 
 ## Assumptions:
-The time complexity analysis assumes basic operations like comparison and swapping take constant time.
-
-No specific data characteristics or patterns in the input array are considered.
+- The time complexity analysis assumes basic operations like comparison and swapping take constant time.
+- No specific data characteristics or patterns in the input array are considered.
 
 
 # Problem 2: Time Complexity Analysis for Matrix Multiplication Pseudocode
