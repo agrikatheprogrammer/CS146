@@ -12,8 +12,10 @@ public class InsertionSort {
             /* Move elements of arr[0..i-1], that are
                greater than key, to one position ahead
                of their current position */
-            while (j >= 0 && arr[j] > key) { //executes n*k times; k depends on no. of times condition is satisfied
-// AT MOST, EACH ELEMENT IS COMPARED ONCE TO REST OF ELEMENTS; SO THIS EXECUTES n-1 TIMES (ordering of orginal array is
+            while (j >= 0 && arr[j] > key) { //executes n*k times; k depends on no. of times
+// condition is satisfied
+// AT MOST, EACH ELEMENT IS COMPARED ONCE TO REST OF ELEMENTS;
+// SO THIS EXECUTES n-1 TIMES (ordering of orginal array is
 // opposite of the sorted aray)
                 arr[j + 1] = arr[j];
                 j = j - 1;
