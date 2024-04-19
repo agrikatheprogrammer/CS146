@@ -9,6 +9,8 @@ class Solution {
             temp+=s.charAt(i);
         }
     }
+    if (temp.length()<=1) 
+        return true;
     temp=temp.toLowerCase();
     int n=temp.length();
     //compare char by char first char ==last? second char==second last?..
