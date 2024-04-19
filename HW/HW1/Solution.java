@@ -1,22 +1,5 @@
 class Solution {
     //1st sol. 
-    public boolean isPalindrome(String s) {
-        String str= s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase(); 
-        if (str.length()<=1)
-            return true;
-        int i=0;
-        int end=str.length()-1;
-        if (str.charAt(i)!=str.charAt(end))
-            return false;
-        if (str.length()>1)
-            return isPalindrome(str.substring(i+1,end));
-        return true;
-    }
-
-
-
-
-    // 2nd sol.
     //beats only 4% w java but this code in python beats 67% of submissions
     public boolean isPalindrome(String s) {
     boolean isIt=true;
@@ -38,6 +21,26 @@ class Solution {
     return isIt;
   }
 
+
+
+    //2nd sol
+     public boolean isPalindrome(String s) {
+        String str= s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase(); 
+        if (str.length()<=1)
+            return true;
+        int i=0;
+        int end=str.length()-1;
+        if (str.charAt(i)!=str.charAt(end))
+            return false;
+        if (str.length()>1)
+            return isPalindrome(str.substring(i+1,end));
+        return true;
+    }
+
+
+
+
+    
 
 
 
