@@ -2,12 +2,7 @@ class Solution {
     //1st sol. 
     //beats only 4% w java but this code in python beats 67% of submissions
     public boolean isPalindrome(String s) {
-    String temp="";
-    for (int i=0;i<s.length();i++) {
-        if (Character.isLetterOrDigit(s.charAt(i))){
-            temp+=s.charAt(i);
-        }
-    }
+     String temp= s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase(); 
     if (temp.length()<=1) 
         return true;
     temp=temp.toLowerCase();
