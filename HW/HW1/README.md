@@ -15,7 +15,7 @@
 # 2ND SOLUTION:
 - This approach removes non-alphanumeric characters from the input string and converts it to lowercase.
 - If the length of the cleaned string is 0 or 1, it immediately returns true.
-- It then compares the characters at the beginning and end of the string.
+- It then compares the two characters at the beginning and end of the string.
 - If they don't match, it returns false.
 - Otherwise, it recursively checks the substring excluding the first and last characters.
 
