@@ -1,4 +1,23 @@
 class Solution {
+    //1st sol. 
+    public boolean isPalindrome(String s) {
+        String str;
+        str = str.replaceAll("[^a-zA-Z0-9]", ""); //using regex, replace all not numbers 0-9 or alphabets a-z A-Z w nothing ""
+        str=str.toLowerCase();
+        int i=0;
+        int end=str.length()-1;
+        return isPalindrome(s.substring(i+1,end));
+        if (str.charAt(i)==str.charAt(end)){
+            return true;
+        }
+    }
+
+
+
+
+
+    // 2nd sol.
+    //beats only 4% w java but this code in python beats 67% of submissions
     public boolean isPalindrome(String s) {
     boolean isIt=true;
     String temp="";
