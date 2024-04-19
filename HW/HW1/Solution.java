@@ -18,6 +18,7 @@ class Solution {
 
 
     // 3rd solution: 2nd solution below OPTIMIZED : AVOID DEEP RECURSION
+    //recursion is MUCH slower-+2ms avg time taken (15ms)-beating 27%
     public boolean isPalindrome(String s) {
     String str = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
     return isPalindromeHelper(str, 0, str.length() - 1);
