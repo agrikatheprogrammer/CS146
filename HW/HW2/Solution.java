@@ -1,5 +1,9 @@
 
 public class Solution extends VersionControl {
+    /*FIRST SOLUTION:
+    Runtime 32 ms Beats 17.84% of users with Java
+    Memory 39.96 MB Beats 85.55% of users with Java
+    */
     public int firstBadVersion(int n) {
         int low = 0;
         int high = n;
