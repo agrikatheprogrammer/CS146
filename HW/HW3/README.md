@@ -62,9 +62,9 @@ When the array is sorted in reverse order, each element needs to be compared and
 ## Average Case: O(n^2)
 In most scenarios, Insertion Sort exhibits quadratic time complexity as it involves nested loops and potentially multiple comparisons and swaps for each element.
 
-##Assumptions:
-
+## Assumptions:
 The time complexity analysis assumes basic operations like comparison and swapping take constant time.
+
 No specific data characteristics or patterns in the input array are considered.
 
 
@@ -80,9 +80,10 @@ Matrix multiplication is an important operation in linear algebra and computer s
 ## Time Complexity Analysis:
 
 The time complexity of matrix multiplication depends on the dimensions of the input matrices.
+
 For two matrices of dimensions m × n and n × p, the overall time complexity is O(mnp).
 
 ## Assumptions:
 
-The time complexity analysis assumes basic operations like addition and multiplication take constant time.
-It assumes no specific patterns or characteristics in the matrices affecting the complexity.
+- The time complexity analysis assumes basic operations like addition and multiplication take constant time.
+- It assumes no specific patterns or characteristics in the matrices affecting the complexity.
