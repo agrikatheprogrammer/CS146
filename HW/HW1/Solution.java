@@ -2,15 +2,29 @@ class Solution {
     //1st sol. 
     public boolean isPalindrome(String s) {
         String str="";
-        str = str.replaceAll("[^a-zA-Z0-9]", ""); 
+        str = s.replaceAll("[^a-zA-Z0-9]", ""); 
         str=str.toLowerCase();
+        System.out.println(str);
         int i=0;
         int end=str.length()-1;
-        if (str.length()<=1)
+        if (str.length()==0)
             return true;
         if (str.charAt(i)!=str.charAt(end))
             return false;
         return isPalindrome(str.substring(i+1,end));
+    }
+
+    public String substring(String s){
+        if (s.length()==0)
+            return "";
+        String str="";
+        str = str.replaceAll("[^a-zA-Z0-9]", ""); 
+        str=str.toLowerCase();
+        System.out.println(str);
+        int i=0;
+        int end=str.length()-1;
+        return (str.substring(i+1,end));
+        
     }
 
 
