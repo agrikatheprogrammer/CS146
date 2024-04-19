@@ -6,7 +6,6 @@ class Solution {
         String str="";
         str = s.replaceAll("[^a-zA-Z0-9]", ""); 
         str=str.toLowerCase();
-        System.out.println(str);
         int i=0;
         int end=str.length()-1;
         if (str.charAt(i)!=str.charAt(end))
