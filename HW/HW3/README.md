@@ -1,11 +1,11 @@
-Problem 1:
+# Problem 1:
 We have discussed insertion sort as an algorithm. Now that we know how to analyze algorithms, let's apply the same analysis to Insertion Sort!
 
 You may refer to class slides/ online resources to refresh your memory on the insertion sort algorithm. 
 
  
 
-Problem 2:
+# Problem 2:
 Below is the pseudocode to perform matrix multiplication, given two matrices A and B. 
 
 ```
