@@ -8,7 +8,8 @@ You may refer to class slides/ online resources to refresh your memory on the in
 Problem 2:
 Below is the pseudocode to perform matrix multiplication, given two matrices A and B. 
 
-`MATRIX_MULTIPLY(A, B): 
+```
+MATRIX_MULTIPLY(A, B): 
   if columns(A) ≠ rows(B): 
     raise ValueError("Matrix multiplication is not defined.") 
 
@@ -23,4 +24,4 @@ Below is the pseudocode to perform matrix multiplication, given two matrices A a
       for k from 1 to cols_A do: 
         sum ← sum + A[i][k] * B[k][j] 
       result[i][j] ← sum return result
-`
+```
