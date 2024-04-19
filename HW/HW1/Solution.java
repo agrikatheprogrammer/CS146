@@ -2,14 +2,12 @@ class Solution {
     //1st sol. 
     public boolean isPalindrome(String s) {
         String str;
-        str = str.replaceAll("[^a-zA-Z0-9]", ""); //using regex, replace all not numbers 0-9 or alphabets a-z A-Z w nothing ""
+        if (s.equals("")) return true;
+        str = str.replaceAll("[^a-zA-Z0-9]", ""); 
         str=str.toLowerCase();
         int i=0;
         int end=str.length()-1;
         return isPalindrome(s.substring(i+1,end));
-        if (str.charAt(i)==str.charAt(end)){
-            return true;
-        }
     }
 
 
