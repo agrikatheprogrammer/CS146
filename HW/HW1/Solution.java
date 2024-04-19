@@ -18,6 +18,7 @@ class Solution {
 
 
     //2nd sol
+    //accepted but time limit is reached for really long palindromes (deep recursion stack)
      public boolean isPalindrome(String s) {
         String str= s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase(); 
         if (str.length()<=1)
