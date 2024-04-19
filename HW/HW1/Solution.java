@@ -21,19 +21,14 @@ class Solution {
     //recursion is MUCH slower-+2ms avg time taken (15ms)-beating 27%
     public boolean isPalindrome(String s) {
     String str = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
-    return isPalindromeHelper(str);
+    return isPalindromeHelper(str).equals(s);
 }
 
-private boolean isPalindromeHelper(String str) {
-        int i=0;
-        int end=str.length()-1;
-        if (str.length()<=1)
-            return true;
-        if (str.charAt(i)!=str.charAt(end))
-            return false;
-        if (str.length()>1)
-            return isPalindrome(str.substring(i+1,end));
-        return true;
+private boolean isPalindromeHelper(String s) {
+        if (s.isEmpty()) {
+            return s;
+        }
+        return reverseString(s.substring(1)) + s.charAt(0);
 }
 
 
