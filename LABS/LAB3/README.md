@@ -6,7 +6,7 @@ For each of the following, just write which function is asymptotically greater (
 Show your reasoning for the same.
 
 * 10000000000n^2 vs n^3: n^3 because in asymptotic analysis, we focus on the dominant term that grows the fastest as the input size increases. In this case, even though the coefficient for n^2 is larger than n^3, the term n^3 grows faster as n increases.
-* n^2 log(n) vs n(log(n))10:
+* n^2 log(n) vs n(log(n))^10: Logarithmic terms grow slower than polynomial terms. In this case, although the base of the logarithm is raised to the power of 10 in the latter term, it is still a logarithmic function compared to the polynomial n^2, so n^2logn dominates over n(log(n))^10 as n increases.
 * nlogn vs 2:
 * 2n vs 22n:
 
