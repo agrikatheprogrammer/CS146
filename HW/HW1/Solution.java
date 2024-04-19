@@ -24,7 +24,7 @@ class Solution {
     return isPalindromeHelper(str).equals(s);
 }
 
-private boolean isPalindromeHelper(String s) {
+private String isPalindromeHelper(String s) {
         if (s.isEmpty()) {
             return s;
         }
