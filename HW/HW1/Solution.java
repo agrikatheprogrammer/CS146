@@ -43,7 +43,7 @@ class Solution {
     
 
 
-    // passes 479/485 cases: memory exceeds for long strings
+    // 3rd sol passes 479/485 cases: memory exceeds for long strings
     public boolean isPalindrome(String s) {
     String str = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
     return isPalindromeHelper(str).equals(str);
