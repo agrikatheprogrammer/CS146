@@ -1,6 +1,6 @@
 class Solution {
     //1st sol. 
-    //beats only 4% w java but this code in python beats 67% of submissions
+    //beats only 43% w java (13ms) but this code in python beats 67% of submissions
     public boolean isPalindrome(String s) {
      String temp= s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase(); 
      int n=temp.length();
