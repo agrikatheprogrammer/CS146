@@ -12,7 +12,7 @@ class Solution {
         if (str.charAt(i)!=str.charAt(end))
             return false;
         if (str.length()>1)
-        return isPalindrome(str.substring(i+1,end));
+            return isPalindrome(str.substring(i+1,end));
         return true;
     }
 
