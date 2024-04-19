@@ -5,8 +5,8 @@ For each of the following, just write which function is asymptotically greater (
 
 Show your reasoning for the same.
 
-* 10000000000n2 vs n3:
-* n2 log(n) vs n(log(n))10:
+* 10000000000n^2 vs n^3: n^3 because in asymptotic analysis, we focus on the dominant term that grows the fastest as the input size increases. In this case, even though the coefficient for n^2 is larger than n^3, the term n^3 grows faster as n increases.
+* n^2 log(n) vs n(log(n))10:
 * nlogn vs 2:
 * 2n vs 22n:
 
