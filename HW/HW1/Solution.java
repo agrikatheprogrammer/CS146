@@ -14,19 +14,6 @@ class Solution {
         return isPalindrome(str.substring(i+1,end));
     }
 
-    public String substring(String s){
-        if (s.length()==0)
-            return "";
-        String str="";
-        str = str.replaceAll("[^a-zA-Z0-9]", ""); 
-        str=str.toLowerCase();
-        System.out.println(str);
-        int i=0;
-        int end=str.length()-1;
-        return (str.substring(i+1,end));
-        
-    }
-
 
 
 
@@ -51,4 +38,22 @@ class Solution {
     }  
     return isIt;
   }
+
+
+
+
+    /* public void subString(String s){
+        String str="";
+        str = s.replaceAll("[^a-zA-Z0-9]", ""); 
+        str=str.toLowerCase();
+        int i=0;
+        int end=str.length()-1;
+        if (str.equals(""))
+        return;
+        System.out.println(str);
+        subString(str.substring(i+1,end));
+
+        }
+    
+    */
 }
