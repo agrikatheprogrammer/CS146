@@ -13,4 +13,9 @@
 - If any mismatch is found during the comparison, the method returns false immediately, indicating that the string is not a palindrome.
 
 # 4TH SOLUTION:
+- This approach iterates through the string using two pointers (start and last), starting from the beginning and end of the string respectively.
+- It compares characters at these pointers, ignoring non-alphanumeric characters.
+- If the characters don't match, it returns false.
+- Otherwise, it moves both pointers towards the center of the string and continues the comparison.
+- If the loop completes without finding any mismatch, it returns true, indicating that the string is a palindrome.
 
