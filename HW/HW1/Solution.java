@@ -6,10 +6,10 @@ class Solution {
         str=str.toLowerCase();
         int i=0;
         int end=str.length()-1;
-        if (str.charAt(i)!=str.charAt(end))
-            return false;
         if (str.length()<=1)
             return true;
+        if (str.charAt(i)!=str.charAt(end))
+            return false;
         return isPalindrome(str.substring(i+1,end));
     }
 
