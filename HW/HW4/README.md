@@ -5,13 +5,13 @@ You may refer to class slides/ online resources to refresh your memory on the in
 
 For insertion sort, what is the 
 
-  *Best Case:
+  * Best Case:
   
-  *Average Case:
+  * Average Case:
   
-  *Worst Case: 
+  * Worst Case: 
   
-  *Time complexity: 
+  * Time complexity: 
 
  
 
@@ -38,10 +38,10 @@ MATRIX_MULTIPLY(A, B):
 
 For insertion sort, what is the 
 
-  *Best Case:
+  * Best Case:
   
-  *Average Case:
+  * Average Case:
   
-  *Worst Case: 
+  * Worst Case: 
   
-  *Time complexity: 
+  * Time complexity: 
