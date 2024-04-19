@@ -5,10 +5,10 @@ For each of the following, just write which function is asymptotically greater (
 
 Show your reasoning for the same.
 
-* 10000000000n2 vs n3
-* n2 log(n) vs n(log(n))10
-* nlogn vs 2
-* 2n vs 22n
+* 10000000000n2 vs n3:
+* n2 log(n) vs n(log(n))10:
+* nlogn vs 2:
+* 2n vs 22n:
 
   
 # Problem 2:
