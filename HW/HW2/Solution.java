@@ -9,7 +9,7 @@ public class Solution extends VersionControl {
         int high = n;
         while(low<=high){
             int mid = low + (high-low)/2;
-            if(isBadVersion(mid)==false ) low = mid+1;
+            if(isBadVersion(mid)==false) low = mid+1;
             else if (isBadVersion(mid-1)==false) return mid;
             else high= mid-1;
         }     
