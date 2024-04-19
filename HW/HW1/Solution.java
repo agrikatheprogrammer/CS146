@@ -17,6 +17,23 @@ class Solution {
 
 
 
+    // 3rd solution: 2nd solution below OPTIMIZED : AVOID DEEP RECURSION
+    public boolean isPalindrome(String s) {
+    String str = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+    return isPalindromeHelper(str, 0, str.length() - 1);
+}
+
+private boolean isPalindromeHelper(String str, int start, int end) {
+    if (start >= end) {
+        return true;
+    }
+    if (str.charAt(start) != str.charAt(end)) {
+        return false;
+    }
+    return isPalindromeHelper(str, start + 1, end - 1);
+}
+
+
     //2nd sol
     //accepted but time limit is reached for really long palindromes (deep recursion stack)
      public boolean isPalindrome(String s) {
