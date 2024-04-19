@@ -12,6 +12,18 @@
 - If the loop doesn't exit early due to a mismatch, it means all characters were successfully compared, and the string is a palindrome. In this case, the method returns true.
 - If any mismatch is found during the comparison, the method returns false immediately, indicating that the string is not a palindrome.
 
+# 2ND SOLUTION:
+- This approach removes non-alphanumeric characters from the input string and converts it to lowercase.
+- If the length of the cleaned string is 0 or 1, it immediately returns true.
+- It then compares the characters at the beginning and end of the string.
+- If they don't match, it returns false.
+- Otherwise, it recursively checks the substring excluding the first and last characters.
+
+# 3RD SOLUTION: 
+- This approach removes non-alphanumeric characters from the input string and converts it to lowercase.
+- It uses a recursive helper function to reverse the string.
+- If the reversed string is equal to the original string, it returns true, indicating that it is a palindrome.
+
 # 4TH SOLUTION:
 - This approach iterates through the string using two pointers (start and last), starting from the beginning and end of the string respectively.
 - It compares characters at these pointers, ignoring non-alphanumeric characters.
