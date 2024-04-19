@@ -3,10 +3,9 @@ class Solution {
     //beats only 4% w java but this code in python beats 67% of submissions
     public boolean isPalindrome(String s) {
      String temp= s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase(); 
-    if (temp.length()<=1) 
+     int n=temp.length();
+    if (n<=1) 
         return true;
-    temp=temp.toLowerCase();
-    int n=temp.length();
     //compare char by char first char ==last? second char==second last?..
     for (int i=0;i<n;i++) {
       if (temp.charAt(i)!=temp.charAt(n-i-1)) {
