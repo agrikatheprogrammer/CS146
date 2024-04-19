@@ -4,9 +4,13 @@ We have discussed insertion sort as an algorithm. Now that we know how to analyz
 You may refer to class slides/ online resources to refresh your memory on the insertion sort algorithm. 
 
 For insertion sort, what is the 
+
   *Best Case:
+  
   *Average Case:
+  
   *Worst Case: 
+  
   *Time complexity: 
 
  
@@ -32,8 +36,12 @@ MATRIX_MULTIPLY(A, B):
       result[i][j] ← sum return result
 ```
 
-For the above pseudocode, what is the 
+For insertion sort, what is the 
+
   *Best Case:
+  
   *Average Case:
+  
   *Worst Case: 
+  
   *Time complexity: 
