@@ -23,10 +23,12 @@ This solution utilizes a binary search algorithm to efficiently find the first b
 ## Runtime Analysis
 - Average time complexity: θ(logn)
 - Best time complexity: θ(1)
-- Worst time complexity: θ(logn)
+- Worst time complexity: θ(logn)  
 - Runtime: 32 ms
 - This runtime beats 17.84% of users with Java, indicating moderate efficiency.
-Memory Usage: 39.96 MB
-This memory usage beats 85.55% of users with Java, indicating efficient memory management.
-Conclusion
+- Memory Usage: 39.96 MB
+- This memory usage beats 85.55% of users with Java, indicating efficient memory management.
+
+
+## Conclusion
 This binary search approach efficiently finds the first bad version among a sequence of versions, making use of the provided isBadVersion API. Despite being moderate in runtime efficiency, it manages memory usage efficiently.
