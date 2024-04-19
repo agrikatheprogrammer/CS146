@@ -33,21 +33,20 @@ Below is the pseudocode to perform matrix multiplication, given two matrices A a
 
 ```
 MATRIX_MULTIPLY(A, B): 
-  if columns(A) ≠ rows(B): 
+  if columns(A) ≠ rows(B): //executes once
     raise ValueError("Matrix multiplication is not defined.") 
 
-  rows_A ← number of rows in A 
-  cols_A ← number of columns in A 
-  cols_B ← number of columns in B 
-  result ← matrix of size rows_A x cols_B filled with zeros 
+  rows_A ← number of rows in A //executes once
+  cols_A ← number of columns in A //executes once
+  cols_B ← number of columns in B //executes once
+  result ← matrix of size rows_A x cols_B filled with zeros //executes once
 
   for i from 1 to rows_A do: //executes rows_A times
     for j from 1 to cols_B do: //executes rows_A*cols_B times
     sum ← 0 
-      for k from 1 to cols_A do: //executes cols_B*rows_A*cols_A times=dominating
-      // in most time taken overall in function
+      for k from 1 to cols_A do: //executes cols_B*rows_A*cols_A times=most time taken overall
         sum ← sum + A[i][k] * B[k][j] 
-      result[i][j] ← sum return result
+      result[i][j] ← sum return result //executes once
 ```
 
 # Problem 1: Time Complexity Analysis for Insertion Sort
