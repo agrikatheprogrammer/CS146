@@ -44,3 +44,45 @@ MATRIX_MULTIPLY(A, B):
         sum ← sum + A[i][k] * B[k][j] 
       result[i][j] ← sum return result
 ```
+
+# Problem 1: Time Complexity Analysis for Insertion Sort
+## Introduction:
+Insertion Sort is a simple sorting algorithm that builds the final sorted array one element at a time. It iterates through an array, repeatedly selecting the next element and inserting it into the sorted portion of the array.
+
+## Algorithm Overview:
+
+The algorithm starts with the second element of the array and compares it with the elements before it, moving larger elements one position to the right until it finds the correct position for the current element.
+It continues this process for each element in the array until the entire array is sorted.
+Time Complexity Analysis:
+
+## Best Case: O(n)
+When the array is already sorted, Insertion Sort only needs to compare each element with its preceding element once, resulting in linear time complexity.
+## Worst Case: O(n^2)
+When the array is sorted in reverse order, each element needs to be compared and moved to its correct position, resulting in quadratic time complexity.
+## Average Case: O(n^2)
+In most scenarios, Insertion Sort exhibits quadratic time complexity as it involves nested loops and potentially multiple comparisons and swaps for each element.
+
+##Assumptions:
+
+The time complexity analysis assumes basic operations like comparison and swapping take constant time.
+No specific data characteristics or patterns in the input array are considered.
+
+
+# Problem 2: Time Complexity Analysis for Matrix Multiplication Pseudocode
+## Introduction:
+Matrix multiplication is an important operation in linear algebra and computer science, widely used in various applications.
+
+## Pseudocode Overview:
+- The pseudocode first checks if the number of columns in matrix A matches the number of rows in matrix B, ensuring compatibility for multiplication.
+- It initializes a result matrix with appropriate dimensions and fills it with zeros.
+- It iterates through each element of the result matrix, calculating the dot product of corresponding rows and columns from matrices A and B.
+  
+## Time Complexity Analysis:
+
+The time complexity of matrix multiplication depends on the dimensions of the input matrices.
+For two matrices of dimensions m × n and n × p, the overall time complexity is O(mnp).
+
+## Assumptions:
+
+The time complexity analysis assumes basic operations like addition and multiplication take constant time.
+It assumes no specific patterns or characteristics in the matrices affecting the complexity.
