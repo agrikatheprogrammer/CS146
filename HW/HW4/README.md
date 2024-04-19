@@ -1,5 +1,6 @@
-Problem 1:
+# Problem 1:
 We have discussed insertion sort as an algorithm. Now that we know how to analyze algorithms AND asymptotic notation, let's revisit Insertion Sort!
+
 You may refer to class slides/ online resources to refresh your memory on the insertion sort algorithm. 
 
 For insertion sort, what is the 
@@ -10,7 +11,7 @@ For insertion sort, what is the
 
  
 
-Problem 2:
+# Problem 2:
 Below is the pseudocode to perform matrix multiplication that we discussed in HW3. 
 
 ```
