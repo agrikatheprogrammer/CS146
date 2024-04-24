@@ -5,7 +5,7 @@ class Solution {
         int[][] possibleEdges = Arrays.copyOf(pipes, pipes.length + n); //make copy of pipes with extra space for n houses
         for (int i = 0; i < n; i++) { //for each house from 1 to n,
             possibleEdges[pipes.length + i] = new int[] {0, i + 1, wells[i]}; 
-        // create pipes from virtual node/house
+        // create pipes from virtual node/water source
         // representing building a well in that house
         }
         Arrays.sort(possibleEdges, (a, b) -> a[2] - b[2]); //sort the pipe edges depending on cost
