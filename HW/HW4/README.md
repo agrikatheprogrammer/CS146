@@ -3,7 +3,7 @@ We have discussed insertion sort as an algorithm. Now that we know how to analyz
 
 You may refer to class slides/ online resources to refresh your memory on the insertion sort algorithm. 
 
-For insertion sort, what is the 
+For insertion sort,
 
   * Best Case:
     
