@@ -6,12 +6,20 @@ You may refer to class slides/ online resources to refresh your memory on the in
 For insertion sort, what is the 
 
   * Best Case:
+    
+The best case occurs when the input array is already sorted. In this scenario, for each element in the array, only one comparison needs to be made with the elements before it, and no swaps are required. Therefore, the time complexity is O(n), where n is the number of elements in the array.
+
+* Average Case:
   
-  * Average Case:
+In the average case, we assume that each element has an equal probability of being in any position in the array. In this case, for each element, on average, we need to compare it with half of the elements before it. Therefore, the average time complexity is O(n^2), where n is the number of elements in the array.
+
+* Worst Case:
   
-  * Worst Case: 
+The worst case occurs when the input array is sorted in reverse order. In this scenario, for each element in the array, we need to compare it with all the elements before it and shift them to make space for the current element. This results in a time complexity of O(n^2), where n is the number of elements in the array.
+
+* Time Complexity:
   
-  * Time complexity: 
+The time complexity of Insertion Sort in all cases (best case, average case, and worst case) is O(n^2), where n is the number of elements in the array.
 
  
 
