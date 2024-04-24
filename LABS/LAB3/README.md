@@ -38,7 +38,7 @@ isPrime(n):
   
 * Time complexity for the above function:
 
-The time complexity of the isPrime(n) function is O(sqrt(n))
+  The time complexity of the isPrime(n) function is O(sqrt(n))
 
 
 
