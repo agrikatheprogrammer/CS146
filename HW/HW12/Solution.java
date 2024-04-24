@@ -14,7 +14,7 @@ class Solution {
             parents[i] = i; //each node is its own parent i.e "owns itself"
         }
         int result = 0;
-          // cheapest house for well building would be chosen and added to disjoint set of parents
+          // cheapest house for well building would be chosen and added as a parent of virtual node
         for (var x : possibleEdges) { //for each edge, in ascending order of costs,
             int start = x[0], destination = x[1], cost = x[2]; //find starting house and destination house as well as cost to 
           // create a water connection
