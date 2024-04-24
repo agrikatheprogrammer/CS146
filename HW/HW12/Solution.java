@@ -35,6 +35,6 @@ class Solution {
         if (p[x] != x) {
             p[x] = find(p[x]); //recursively finds the parent or group to which x house belongs
         }
-        return p[x]; //if p[x] is x itself, it just returns x, does not belong to a group yet
+        return p[x]; //if p[x] is x itself, it just returns x ("main owner of the group")
     }
 }
