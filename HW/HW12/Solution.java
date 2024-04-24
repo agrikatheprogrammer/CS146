@@ -19,7 +19,7 @@ class Solution {
             int start = x[0], destination = x[1], cost = x[2]; //find starting house and destination house as well as cost to 
           // create a water connection
             int startp = find(start), destp = find(destination); //find their parents, which group they belong to
-            if (startp != destp) { // if they do not belong to the same group
+            if (startp != destp) { // if they do not belong to the same group (they are not merged; distinct sets)
                 parents[startp] = destp; //merge them and make starting house's parent the destination house
               // destination house now "owns" starting house as a part of its group
                 result += cost; //add cost after merging them and accepting edge to create a MST via Kruskal's
