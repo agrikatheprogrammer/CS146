@@ -6,7 +6,8 @@ class Solution {
         for (int i = 0; i < n; i++) { //for each house from 1 to n,
             possibleEdges[pipes.length + i] = new int[] {0, i + 1, wells[i]}; 
         // create pipes from virtual node/house
-        // representing building a well in that house}
+        // representing building a well in that house
+        }
         Arrays.sort(possibleEdges, (a, b) -> a[2] - b[2]); //sort the pipe edges depending on cost
         parents = new int[n + 1];
         for (int i = 0; i <= n; i++) {
