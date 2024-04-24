@@ -17,13 +17,31 @@ Now let's examine some [pseudo]code and apply asymptotic notation to it.
 ```
 isPrime(n): 
   for(i = 2, i*i <= n; i++) {
-    if(n % i == 0) {
+    if(n % i == 0) 
       return false
     }
   return true
 ```
 
-* Best Case:
+* Best Case: 
+
+  The best case occurs when n is not divisible by any number from 2 to sqrt(n) and thus, loop will only execute once to check if statement condition and return false, giving a best case time complexity of O(1).
+  
 * Worst Case:
+
+  The worst case occurs when n is a prime number and during every loop, if statement's condition is false, so loop is executed
+  sqrt(n) times, and upon completion, function returns true, giving a worst case time complexity of O(sqrt(n)).
+  
 * Average Case:
+
+In the average case, we assume that n has an equal probability of being prime or composite. If n is composite, the loop will terminate early upon finding a factor. On average, we can expect to iterate O(sqrt(n)) times. Therefore, the average-case time complexity is also O(sqrt(n)).
+  
 * Time complexity for the above function:
+
+The time complexity of the isPrime(n) function is O(sqrt(n))
+
+
+
+
+
+
