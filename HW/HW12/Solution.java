@@ -15,7 +15,7 @@ class Solution {
         }
         int result = 0;
           // cheapest house for well building would be chosen and added to disjoint set of parents
-        for (var x : possibleEdges) { //for each edge,
+        for (var x : possibleEdges) { //for each edge, in ascending order of costs,
             int start = x[0], destination = x[1], cost = x[2]; //find starting house and destination house as well as cost to 
           // create a water connection
             int startp = find(start), destp = find(destination); //find their parents, which group they belong to
