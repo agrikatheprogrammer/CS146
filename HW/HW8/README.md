@@ -15,17 +15,3 @@ Function definition for Java:
     public int longestPalindrome(String s) {
 
     }
-Function definition for Python:
-def longestPalindrome(self, s):
-  #Your code here
-Announced Test Cases:
-Example 1:
-
-Input: s = "abccccdd"
-Output: 7
-Explanation: One longest palindrome that can be built is "dccaccd", whose length is 7.
-Example 2:
-
-Input: s = "speediskey"
-Output: 5
-Explanation: The longest palindrome that can be built is "seees", whose length is 5.
