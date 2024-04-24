@@ -34,7 +34,7 @@ isPrime(n):
   
 * Average Case:
 
-In the average case, we assume that n has an equal probability of being prime or composite. If n is composite, the loop will terminate early upon finding a factor. On average, we can expect to iterate O(sqrt(n)) times. Therefore, the average-case time complexity is also O(sqrt(n)).
+  In the average case, we assume that n has an equal probability of being prime or composite. If n is composite, the loop will   terminate early upon finding a factor. On average, we can expect to iterate O(sqrt(n)) times. Therefore, the average-case      time complexity is also O(sqrt(n)).
   
 * Time complexity for the above function:
 
