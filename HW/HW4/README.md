@@ -44,12 +44,19 @@ MATRIX_MULTIPLY(A, B):
       result[i][j] ← sum return result
 ```
 
-For insertion sort, what is the 
 
   * Best Case:
+
+The best case occurs when both matrices are empty, resulting in no computation required. However, if we consider the case when matrices are non-empty, there isn't a specific best case scenario since the algorithm must perform all necessary computations regardless of the input matrices' contents. Therefore, the best case time complexity is equivalent to the worst case and average case.
   
   * Average Case:
   
-  * Worst Case: 
+In the average case, we assume that the matrices have random elements. For each element of the resulting matrix, we perform a constant number of operations (specifically, cols_A multiplications and additions). Therefore, the average case time complexity is O(rows_A×cols_B×cols_A).
+
+  * Worst Case:
+
+The worst case occurs when both matrices are large and have non-zero elements in every position. In this scenario, for each element of the resulting matrix, we perform a constant number of operations (specifically, cols_A multiplications and additions). Therefore, the worst case time complexity is O(rows_A×cols_B×cols_A).
   
   * Time complexity: 
+
+The time complexity of matrix multiplication is O(rows_A×cols_B×cols_A).
