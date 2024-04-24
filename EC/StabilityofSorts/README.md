@@ -1,6 +1,6 @@
-In class, we briefly discussed that Merge Sort was stable, and Quick Sort is unstable.
+# In class, we briefly discussed that Merge Sort was stable, and Quick Sort is unstable.
 
-Why would this property be useful? Is there an issue if this property does not hold good for a sorting algorithm?
+## Why would this property be useful? Is there an issue if this property does not hold good for a sorting algorithm?
 
 In the world of sorting algorithms, stability refers to a special property that some algorithms have. Let's say you have a bunch of numbers to sort, but some of them are the same. Now, if you use a stable sorting algorithm, it will make sure that if two numbers are equal, their order in the sorted list remains the same as in the original list.
 
