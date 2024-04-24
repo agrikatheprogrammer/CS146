@@ -1,11 +1,13 @@
+from typing import List
+
 class Solution:
-    def minCostToSupplyWater(self, n, wells, pipes):
-        possible_edges = pipes + [[0, i + 1, wells[i]] for i in range(n)]
-        possible_edges.sort(key=lambda x: x[2])
+    def minCostToSupplyWater(self, n: int, wells: List[int], pipes: List[List[int]]) -> int:
+        possibleEdges = pipes + [[0, i + 1, wells[i]] for i in range(n)]
+        possibleEdges.sort(key=lambda x: x[2])
         self.parents = [i for i in range(n + 1)]
         result = 0
-        for edge in possible_edges:
-            start, destination, cost = edge
+        for x in possibleEdges:
+            start, destination, cost = x
             startp = self.find(start)
             destp = self.find(destination)
             if startp != destp:
