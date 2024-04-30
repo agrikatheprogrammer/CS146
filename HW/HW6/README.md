@@ -86,7 +86,7 @@ Output:
   - Sorting the array takes O(n log n) time.
   - The main loop runs in O(n) time.
   - Within the loop, the two-pointer technique runs in O(n) time.
-  - Thus, the overall time complexity is dominated by the sorting step.
+  - Thus, the overall time complexity is dominated by the code within the main loop.
   
 - **Space Complexity**: O(1)
   - The space complexity is constant because the algorithm only uses a constant amount of extra space for storing variables and the result list.
