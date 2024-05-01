@@ -3,7 +3,7 @@
 The coin change problem is a classic algorithmic problem in which we are given a set of coin denominations and a target amount to make with those coins. The objective is to find the minimum number of coins needed to make up the target amount.
 
 ## Approach
-### Dynamic Programming
+### Dynamic Programming (knapsack)
 Dynamic programming is a powerful technique used to solve optimization problems by breaking them down into simpler subproblems. Here's how we can apply dynamic programming to solve the coin change problem:
 
 * Initialization: Create a 2D array tab with dimensions [coins.length + 1][amount + 1] to store the minimum number of coins needed to make up each amount using various subsets of the given coins. Initialize all cells with a value of Integer.MAX_VALUE, except for tab[0][0] which is set to 0 since it requires 0 coins to make up amount 0.
