@@ -1,7 +1,7 @@
 class Solution {
     public int coinChange(int[] coins, int amount) {
         final int infinity = Integer.MAX_VALUE;
-        int[][] tabulation = new int[coins.length + 1][amount + 1];
+        int[][] tab = new int[coins.length + 1][amount + 1];
         for (var arr : tab) {
             Arrays.fill(arr, infinity);
         }
