@@ -19,3 +19,22 @@ Dynamic programming is a powerful technique used to solve optimization problems 
 * Time Complexity: The time complexity of this dynamic programming solution is O(coins.length * amount), where coins.length is the number of coin denominations and amount is the target amount.
 * Space Complexity: The space complexity is also O(coins.length * amount) due to the use of the tab array.
 
+
+# ALTERNATIVE Greedy Approach for Coin Change Problem
+## Overview
+The coin change problem is a classic algorithmic problem where the objective is to find the minimum number of coins needed to make up a given amount. The greedy approach is one way to tackle this problem, where at each step, we choose the largest possible coin denomination that can fit into the remaining amount.
+
+## Approach: Modified Greedy Algorithm with Backtracking
+* Sort Coins: Sort the available coin denominations in descending order. This allows us to start with the largest denomination first.
+* Backtracking: Use a recursive backtracking approach to try all possible combinations of coins. At each step:
+
+
+    Determine the maximum number of the current coin denomination that can fit into the remaining amount.
+Recursively explore all possible combinations with the remaining coins and remaining amount.
+* Result: Return the minimum count of coins needed if a solution is found. If no solution is possible, return -1.
+
+## Complexity Analysis
+
+* Time Complexity: The time complexity of the greedy approach with backtracking depends on the number of coins and the target amount. In the worst case, it can be exponential, making it less efficient compared to dynamic programming.
+* Space Complexity: The space complexity is determined by the recursion depth, which is related to the number of coins and the target amount.
+
