@@ -1,9 +1,18 @@
-Here's another algorithmic problem to solve:
+# Server Allocation Problem
+## Overview
+As a sysadmin for a tech company, you need to estimate the number of servers required to handle a set of long-running jobs. Each server can handle only one job at a time, and each job can only be executed by one server at a time. Given the start and end times of the jobs, you need to determine the minimum number of servers needed to run all jobs efficiently.
 
-You are the sysadmin for a big tech company, and you have to estimate the amount of servers you need to handle some long-running jobs.
+## Approach: Priority Queue
+* Sort Intervals: Start by sorting the intervals based on their start times. This allows us to process the jobs in chronological order.
+* Priority Queue: Use a priority queue (min heap) to keep track of the end times of currently running jobs. We'll prioritize the servers that finish their jobs earliest.
+* Assign Servers: Iterate through the sorted intervals. For each interval:
 
-One server can handle only one job at once. One job can only be executed by one server at once.
+  Check if the current job can be assigned to an existing server by comparing its start time with the earliest end time of running jobs.
+  
+  If the job starts after the earliest end time, remove the earliest end time from the queue (indicating that a server is available).
+* Assign a server for the current job by adding its end time to the queue.
+* Minimum Servers: The size of the priority queue at the end represents the minimum number of servers required to handle all jobs simultaneously.
 
-Once a server has finished executing its current job, it can be reassigned to a new job.
-
-Given an array of time intervals intervals where intervals[i] = [starti, endi], representing the start and end time for a particular job that needs to be executed, return the minimum number of servers required to run all jobs.
+## Complexity Analysis
+* Time Complexity: Sorting the intervals takes O(n log n) time, where n is the number of intervals. The priority queue operations take O(log n) time for each interval. Overall, the time complexity is O(n log n).
+* Space Complexity: The space complexity is O(n) for the priority queue.
