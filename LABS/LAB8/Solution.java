@@ -10,7 +10,7 @@ class Solution {
             for (int j = 0; j <= amount; ++j) {
                 tab[i][j] = tab[i - 1][j];
                 if (j >= coins[i - 1]) {
-                    tab[i][j] = Math.min(tab[i][j], tab[i][j] - coins[i - 1] + 1);
+                    tab[i][j] = Math.min(tab[i][j], tab[i][j - coins[i - 1]] + 1);
                 }
             }
         }
