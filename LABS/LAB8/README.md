@@ -10,7 +10,8 @@ Dynamic programming is a powerful technique used to solve optimization problems 
 
 * Tabulation: Iterate over each coin denomination and each possible amount from 0 to amount. For each coin denomination coins[i], and each amount j, update tab[i][j] as follows:
 
-* Initialize tab[i][j] with the value from the row above (tab[i-1][j]), indicating the minimum number of coins needed without using the current coin denomination. If j is greater than or equal to the value of the current coin denomination coins[i-1], update tab[i][j] to the minimum of its current value and tab[i][j - coins[i-1]] + 1, which represents the minimum number of coins needed by including the current coin denomination.
+
+Initialize tab[i][j] with the value from the row above (tab[i-1][j]), indicating the minimum number of coins needed without using the current coin denomination. If j is greater than or equal to the value of the current coin denomination coins[i-1], update tab[i][j] to the minimum of its current value and tab[i][j - coins[i-1]] + 1, which represents the minimum number of coins needed by including the current coin denomination.
 
 * Result: The minimum number of coins needed to make up the target amount amount using the given coins is stored in tab[coins.length][amount]. If this value is Integer.MAX_VALUE, it means it's not possible to make the amount with the given coins, so return -1. Otherwise, return the value stored in tab[coins.length][amount].
 
