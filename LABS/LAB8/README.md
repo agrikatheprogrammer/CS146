@@ -11,28 +11,4 @@ Constraints:
 1 <= coins.length <= 12
 1 <= coins[i] <= 231 - 1
 0 <= amount <= 104
-Function definition for Java: 
-
-public int coinChange(int[] coins, int amount) {
-
- }
-Function definition for Python:
-def coinChange(self, coins: List[int], amount: int) -> int:
-  #Your code here
-
-
-Announced Test Cases:
-
-Test Case 1:
-Input: coins = [1,2,5], amount = 11 
-Output: 3 
-Explanation: 11 = 5 + 5 + 1
-Test Case 2:
-Input: coins = [2], amount = 3 
-Output: -1
-
-Test Case 3: 
-Input: coins = [1], amount = 0 
-Output: 0
-
 
